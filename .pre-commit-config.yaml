@@ -1,10 +1,10 @@
 repos:
   # 1) Call the hook of the current repo (in dev/test)
-  - repo: https://github.com/duong102030/Check_copyright
-    rev: main
-    hooks:
-      - id: add-copyright-nkd
-        stages: [commit]
+  # - repo: https://github.com/duong102030/Check_copyright
+  #   rev: main
+  #   hooks:
+  #     - id: add-copyright-nkd
+  #       stages: [commit]
   # 2) Other useful hooks (Optional)
   - repo: https://github.com/pre-commit/pre-commit-hooks.git
     rev: v4.6.0
@@ -38,3 +38,8 @@ repos:
       - id: clang-format
         name: C/C++ code format check
         args: ["-i", "--style={BasedOnStyle: Google, IndentWidth: 4, BreakBeforeBraces: Linux, UseTab: Never}"]
+  - repo: https://github.com/duong102030/Check_coding_standard.git
+    rev: main
+    hooks:
+      - id: add-nkd-coding-standard
+        stages: [commit]
